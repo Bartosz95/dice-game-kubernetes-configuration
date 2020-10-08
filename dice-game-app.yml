@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dice-game-a
+  name: dice-game-app
   labels:
     name: dice-game-dashboard
     app: dice-game-app

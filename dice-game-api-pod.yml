@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: dice-game-api
   labels:
-    name: dice-game-api-pod
+    name: dice-game-api
     app: dice-game-app
 spec:
     containers:

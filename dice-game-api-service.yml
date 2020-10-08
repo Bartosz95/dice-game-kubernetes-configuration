@@ -3,12 +3,14 @@ kind: Service
 metadata:
   name: dice-game-api
   labels:
-    name: dice-game-api-service
+    name: dice-game-api
     app: dice-game-app
 spec:
   ports:
-  - port: 3000
-    targetPort: 3000
+  - protocol: TCP
+    port: 3000
+    targetPort: http
   selector:
-    name: dice-game-api-pod
+    name: dice-game-api
     app: dice-game-app
+    tier: backend
