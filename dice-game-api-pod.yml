@@ -10,4 +10,4 @@ spec:
       - image:  bartosz95/dice-game-api
         name:  dice-game-api
         ports:
-        - containersPort: 3000
+        - containerPort: 3000

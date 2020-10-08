@@ -10,4 +10,4 @@ spec:
       - image:  bartosz95/dice-game-dashboard
         name:  dice-game-dashboard
         ports:
-        - containersPort: 4200
+        - containerPort: 4200
