@@ -8,7 +8,7 @@ metadata:
 spec:
   ports:
   - port: 3000
-    tagetPort: 3000
+    targetPort: 3000
   selector:
     name: dice-game-api-pod
     app: dice-game-app
