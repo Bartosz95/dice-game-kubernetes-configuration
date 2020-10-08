@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dice-game-dashboard
+  labels:
+    name: dice-game-dashboard-pod
+    app: dice-game-app
+spec:
+    containers:
+      - image:  bartosz95/dice-game-dashboard
+        name:  dice-game-dashboard
+        ports:
+        - containersPort: 4200

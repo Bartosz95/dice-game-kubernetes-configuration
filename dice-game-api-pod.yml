@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dice-game-api
+  labels:
+    name: dice-game-api-pod
+    app: dice-game-app
+spec:
+    containers:
+      - image:  bartosz95/dice-game-api
+        name:  dice-game-api
+        ports:
+        - containersPort: 3000

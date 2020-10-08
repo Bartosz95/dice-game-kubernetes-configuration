@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dice-game-api
+  labels:
+    name: dice-game-api-service
+    app: dice-game-app
+  spec:
+    ports:
+    - port: 3000
+      tagetPort: 3000
+    selector:
+      name: dice-game-api-pod
+      app: dice-game-app

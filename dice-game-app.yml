@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dice-game-a
+  labels:
+    name: dice-game-dashboard
+    app: dice-game-app
+  spec:
+    type: LoadBalancer
+    ports:
+    - port: 4200
+      tagetPort: 4200
+    selector:
+      name: dice-game-dashboard-pod
+      app: dice-game-app
