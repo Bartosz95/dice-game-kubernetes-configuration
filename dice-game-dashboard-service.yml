@@ -8,8 +8,9 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-  - port: 4200
-    targetPort: 4200
+   - port: 4200
+     targetPort: 4200
   selector:
     name: dice-game-dashboard-pod
     app: dice-game-app
+    type: front-end

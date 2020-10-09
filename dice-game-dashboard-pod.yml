@@ -5,6 +5,7 @@ metadata:
   labels:
     name: dice-game-dashboard-pod
     app: dice-game-app
+    type: front-end
 spec:
     containers:
       - image:  bartosz95/dice-game-dashboard

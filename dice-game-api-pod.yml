@@ -5,6 +5,7 @@ metadata:
   labels:
     name: dice-game-api-pod
     app: dice-game-app
+    type: back-end
 spec:
     containers:
       - image:  bartosz95/dice-game-api
