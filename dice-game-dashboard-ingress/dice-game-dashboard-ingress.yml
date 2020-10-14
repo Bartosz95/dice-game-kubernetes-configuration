@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Ingress
+metadata:
+  name: dice-game-ingress
+  labels:
+    name: dice-game-dashboard-ingress
+    app: dice-game-app
+spec:
+  rules:
+  - host: dice-game
+    http:
+      paths:
+      - backend:
+          serviceName: dice-game-dashboard-nodeport
+          servicePort:  80

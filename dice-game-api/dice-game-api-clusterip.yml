@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: dice-game-api
   labels:
-    name: dice-game-api-service
+    name: dice-game-api-clusterip
     app: dice-game-app
 spec:
   type: ClusterIP
