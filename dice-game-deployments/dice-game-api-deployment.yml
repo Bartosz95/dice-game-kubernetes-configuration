@@ -11,6 +11,10 @@ selector:
   matchLabels:
     type: back-end
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      type: back-end
   template: 
     metadata:
       name: dice-game-api-pod

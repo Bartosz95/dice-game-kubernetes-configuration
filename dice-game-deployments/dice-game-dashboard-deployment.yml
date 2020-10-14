@@ -6,11 +6,12 @@ metadata:
     name: dice-game-dashboard-deployment
     app: dice-game-app
     type: front-end
-replicas: 3
-selector:
-  matchLabels:
-    type: front-end
+
 spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: front-end
   template: 
     metadata:
       name: dice-game-dashboard-pod
