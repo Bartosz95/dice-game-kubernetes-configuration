@@ -6,10 +6,6 @@ metadata:
     name: dice-game-api-deployment
     app: dice-game-app
     type: back-end
-replicas: 1
-selector:
-  matchLabels:
-    type: back-end
 spec:
   replicas: 1
   selector:

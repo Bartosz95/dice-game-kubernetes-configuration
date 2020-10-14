@@ -17,19 +17,34 @@ git clone https://github.com/Bartosz95/zyj-game-kubernetes-configuration.git
 cd dice-game-kubernetes-configuration/
 ```
 
-## There are several way to install this application
+## You can install this appllication as single pods or deployment 
 
-### Install manually
-#### 1. Install
-##### Pods
+### 3. Install Dice Game Api as deployment 
 ``` bash
-kubectl create -f dice-game-pods/
+kubectl create -f dice-game-deployments/dice-game-api-deployment.yml
 ```
-##### Services
+### * Or install Dice Game Api as single pod
 ``` bash
-kubectl create -f dice-game-services/
+kubectl create -f dice-game-pods/dice-game-api-pod.yml
 ```
-#### 2. Check status
+### 4. Start Dice Game Api Services
+``` bash
+kubectl create -f dice-game-services/dice-game-api-clusterip.yml
+```
+### 5. Install Dice Game Dashboard as deployment 
+``` bash
+kubectl create -f dice-game-deployments/dice-game-dashboard-deployment.yml
+```
+### * Or install Dice Game Dashboard as single pod
+``` bash
+kubectl create -f dice-game-pods/dice-game-dashboard-pod.yml
+```
+### 6. Start Dice Game Dashboard Services
+``` bash
+kubectl create -f dice-game-services/dice-game-dashboard-clusterip.yml
+```
+
+## 7. Check status
 ``` bash
 kubectl get all
 
@@ -45,16 +60,19 @@ If you want to go see app go to IP address EXTERNAL-IP of service/dice-game-dash
 ```url
 http://34.72.14.59
 ```
-You should see page like below:
+#### Page should looks like below
 
 ![Dice-Game dashboard](images/dashboard.png)
+
 #### 3. Delete all 
 ``` bash
 kubectl delete pod/dice-game-api-pod pod/dice-game-dashboard-pod service/dice-game-dashboard-loadbalancer 
 service/dice-game-api 
 ```
-#### You should get something like this:
-(...)
 ### Install by deployment:
-(...)
+1. Create api deployment 
+
+ kubectl create -f dice-game-services/dice-game-api-clusterip.yml
+
+ kubectl create -f dice-game-services/dice-game-dashboard-loadbalancer.yml
 
