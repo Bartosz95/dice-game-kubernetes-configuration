@@ -41,10 +41,12 @@ service/dice-game-api                      ClusterIP      10.4.11.3    <none>   
 service/dice-game-dashboard-loadbalancer   LoadBalancer   10.4.15.64   34.72.14.59   80:32747/TCP   3m25s
 service/kubernetes                         ClusterIP      10.4.0.1     <none>        443/TCP        46m
 ```
-If you want to go view app go to page
+If you want to go see app go to IP address EXTERNAL-IP of service/dice-game-dashboard-loadbalancer. IP address will be different for you.
 ```url
 http://34.72.14.59
 ```
+You should see page like below:
+
 ![Dice-Game dashboard](images/dashboard.png)
 #### 3. Delete all 
 ``` bash
