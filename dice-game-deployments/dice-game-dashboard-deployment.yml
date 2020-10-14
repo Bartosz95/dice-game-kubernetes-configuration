@@ -1,0 +1,26 @@
+dashboardVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dice-game-dashboard-deployment
+  labels: 
+    name: dice-game-dashboard-deployment
+    app: dice-game-app
+    type: front-end
+replicas: 3
+selector:
+  matchLabels:
+    type: front-end
+spec:
+  template: 
+    metadata:
+      name: dice-game-dashboard-pod
+      labels:
+        name: dice-game-dashboard-pod
+        app: dice-game-app
+        type: front-end
+    spec:
+        containers:
+          - image:  bartosz95/dice-game-dashboard
+            name:  dice-game-dashboard-pod
+            ports:
+            - containerPort: 4200

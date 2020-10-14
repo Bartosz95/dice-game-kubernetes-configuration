@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dice-game-api-deployment
+  labels: 
+    name: dice-game-api-deployment
+    app: dice-game-app
+    type: back-end
+replicas: 1
+selector:
+  matchLabels:
+    type: back-end
+spec:
+  template: 
+    metadata:
+      name: dice-game-api-pod
+      labels:
+        name: dice-game-api-pod
+        app: dice-game-app
+        type: back-end
+    spec:
+        containers:
+          - image:  bartosz95/dice-game-api
+            name:  dice-game-api-pod
+            ports:
+            - containerPort: 3000
