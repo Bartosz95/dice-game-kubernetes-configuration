@@ -23,11 +23,11 @@ cd dice-game-kubernetes-configuration/
 #### 1. Install
 ##### Pods
 ``` bash
-kubectl create -f dice-game-pods/*
+kubectl create -f dice-game-pods/
 ```
 ##### Services
 ``` bash
-kubectl create -f dice-game-services/*
+kubectl create -f dice-game-services/
 ```
 #### 2. Check status
 ``` bash
